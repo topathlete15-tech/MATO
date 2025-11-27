@@ -9,5 +9,13 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   get "top" => "homes#top"
   root "homes#top"
+
+  resources :tasks do
+    resources :comments, only: %i[create destroy]
+    resource :favorite, only: %i[create destroy]
+    collection do
+      get :confirm
+    end
+  end
 end
 
