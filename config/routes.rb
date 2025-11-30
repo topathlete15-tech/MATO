@@ -10,6 +10,15 @@ Rails.application.routes.draw do
   get "top" => "homes#top"
   root "homes#top"
 
+  # ユーザー認証関連
+  get "signup" => "users#new", as: :signup
+  post "signup" => "users#create"
+  get "login" => "sessions#new", as: :login
+  post "login" => "sessions#create"
+  delete "logout" => "sessions#destroy", as: :logout
+
+  resources :users, only: %i[show edit update]
+  
   resources :tasks do
     resources :comments, only: %i[create destroy]
     resource :favorite, only: %i[create destroy]
