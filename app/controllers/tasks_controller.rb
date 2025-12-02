@@ -7,6 +7,8 @@ class TasksController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @task.comments.includes(:user).order(created_at: :asc)
   end
 
   def new
