@@ -178,3 +178,32 @@ header {
     color: #333;
     z-index: 1000;
 }
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+
+}
+
+.signup-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+
+}
+
+.card-header {
+    background-color: #FFFFFF;
+
+}
+
+.card-header h2 {
+    color: #000000;
+}

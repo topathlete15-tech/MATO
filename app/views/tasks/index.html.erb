@@ -47,4 +47,5 @@
       <%= link_to "最初のタスクを作成する", new_task_path, class: "btn btn-primary" %>
     </div>
   <% end %>
+  <%= link_to "ログアウト", logout_path, data: {turbo_method: :delete }, class: "btn btn-secondary" %>
 </div>
