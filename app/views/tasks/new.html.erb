@@ -28,19 +28,6 @@
               <%= f.text_area :description, class: "form-control", rows: 5, placeholder: "タスクの詳細を入力してください" %>
             </div>
 
-            <div class="mb-3">
-             <span class="badge bg-<%= @task.status == 'completed' ? 'success' : @task.status == 'in_progress' ? 'warning' : 'secondary' %>">
-               <%= case @task.status
-                 when 'pending'
-                   '未着手'
-                 when 'in_progress'
-                   '進行中'
-                 when 'completed'
-                   '完了'
-                end %>
-              </span>
-            </div>
-
             <div class="d-flex justify-content-between">
               <%= link_to "キャンセル", tasks_path, class: "btn btn-secondary" %>
               <%= f.submit "タスクを作成", class: "btn btn-primary" %>

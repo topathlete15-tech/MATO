@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_12_04_120040) do
+ActiveRecord::Schema[7.1].define(version: 2026_01_04_055801) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -61,7 +61,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_12_04_120040) do
     t.string "title"
     t.text "description"
     t.integer "user_id", null: false
-    t.integer "status"
+    t.integer "status", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "category_id"
@@ -72,13 +72,12 @@ ActiveRecord::Schema[7.1].define(version: 2025_12_04_120040) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "password_digest"
+    t.string "password_digest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "profile_image_id"
     t.string "user_name"
     t.text "profile"
-    t.string "encrypted_password"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

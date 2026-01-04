@@ -30,7 +30,16 @@
 
             <div class="mb-3">
               <%= f.label :status, "ステータス", class: "form-label fw-bold" %>
-              <%= f.select :status, Task.statuses.keys.map { |k| [I18n.t("tasks.status.#{k}", default: k.humanize), k] }, {}, { class: "form-select" } %>
+              <%= f.select :status, Task.statuses.keys.map { |k|
+                [case k
+                 when 'pending'
+                   '未着手'
+                 when 'in_progress'
+                   '進行中'
+                 when 'completed'
+                   '完了'
+                 end, k]
+                }, {}, { class: "form-select"} %>
             </div>
 
             <div class="d-flex justify-content-between">

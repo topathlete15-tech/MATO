@@ -122,6 +122,12 @@ header {
     text-decoration: underline;
 }
 
+//全体の背景を指定
+.app-body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
 // ============================================
 // トップページのスタイル
 // ============================================
@@ -130,7 +136,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: 20px;
 }
 
@@ -184,7 +189,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: 20px;
 
 }
@@ -194,7 +198,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: 20px;
 
 }
