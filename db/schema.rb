@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_01_04_055801) do
+ActiveRecord::Schema[7.1].define(version: 2026_01_04_113839) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -70,13 +70,13 @@ ActiveRecord::Schema[7.1].define(version: 2026_01_04_055801) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
+    t.string "name", null: false
+    t.string "email", null: false
     t.string "password_digest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "profile_image_id"
-    t.string "user_name"
+    t.string "user_name", null: false
     t.text "profile"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
